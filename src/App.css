@@ -89,9 +89,15 @@
 .card .description{
   position: relative;
   height: 100px;
-  overflow: hidden;
   text-align: start;
   padding: 5px 10px;
+
+  text-overflow:ellipsis;
+  overflow:hidden;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  white-space: normal;
 }
 
 .cart-btn{
