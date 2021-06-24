@@ -60,6 +60,7 @@
 .card .details {
   padding-left: 10px;
   margin: 10px auto;
+  height:100px;
 }
 
 .card .details h3 {
@@ -83,6 +84,14 @@
   font-size: 15px;
   letter-spacing: 2px;
   color: #009688;
+}
+
+.card .description{
+  position: relative;
+  height: 100px;
+  overflow: hidden;
+  text-align: start;
+  padding: 5px 10px;
 }
 
 .cart-btn{

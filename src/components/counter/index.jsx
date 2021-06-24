@@ -1,39 +1,26 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 
-class Counter extends Component {
-    constructor(props) {
-        super(props);
-        this.state = { 
-            count:0
-         }
-    }
-    shouldComponentUpdate(nextProps, nextState){
-        if(nextState.count <= 5 && nextState.count >= 0){
-            return true;
-        }else{
-            return false;
+const Counter = () => {
+    const [count, setCount] = useState(0);
+
+    const increment = () => {
+        if(count < 5){
+            setCount(count+1)
         }
     }
-    increment = () => {
-        const {count} = this.state;
-        if(count < 10){
-            this.setState({count:count+1})
-        }
-    }
-    decrement = () => {
-        const {count} = this.state;
+    const decrement = () => {
         if(count > 0){
-            this.setState({count:count-1})
+            setCount(count-1)
         }
     }
-    render() { 
-        return ( <CounterComponent 
-            count={this.state.count}
-            increment={this.increment}
-            decrement={this.decrement}
+
+    return ( <CounterComponent 
+            count={count}
+            increment={increment}
+            decrement={decrement}
         /> );
-    }
 }
+ 
 
 const CounterComponent = ({count,increment,decrement}) => {
     return ( <div className="counter">
