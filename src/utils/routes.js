@@ -1,4 +1,4 @@
-const BASE_URL = process.env.NODE_ENV === "production" ? "sample-react-gh-page" : ""; 
+const BASE_URL = process.env.PUBLIC_URL; 
 
 
 const HOME_URL = BASE_URL + '/';
