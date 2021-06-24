@@ -16,18 +16,10 @@ const ProductsComponent = () => {
     }, [])
 
     return (<>
-        <nav class="navbar navbar-light bg-dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" style={{ color: 'white' }}>Navbar</a>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-            </div>
-        </nav>
         {loader ? <h1>Loading...</h1> : <div className="card-container">
             {productList.map((product, i) => {
                 return <ProductCard key={i}
+                    id={product.id}
                     name={product.name}
                     brand={product.brand}
                     price={product.price}

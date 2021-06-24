@@ -10,7 +10,13 @@ const getProducts = async () => {
     return res.data;
 }
 
+const getProductById = async (id) => {
+    const res = await axios.get(`https://5d76bf96515d1a0014085cf9.mockapi.io/product/${id}`);
+    return res.data;
+}
+
 export {
     searchMovies,
-    getProducts
+    getProducts,
+    getProductById
 }
